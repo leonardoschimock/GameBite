@@ -1,0 +1,47 @@
+header h1 {
+    font-family: "Sixtyfour", sans-serif;
+    font-style: normal;
+    color: yellow;
+    text-align: center;
+    font-size: 50px;
+}
+
+nav{
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+nav a{
+    font-family: "Pixelify sans", sans-serif;
+    text-decoration: none;
+    color: yellow;
+    font-size: 20px;
+    padding: 0 100px;
+    -webkit-text-stroke: 0.2px white;
+}
+
+nav span {
+    color:yellow;
+    -webkit-text-stroke: 0.2px white;
+}
+
+nav a:hover{
+    color: white;
+}
+
+
+header {
+    height: 400px;
+    background-image: url(/menuReceitas/assets/headerImage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
