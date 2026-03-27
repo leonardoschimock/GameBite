@@ -88,3 +88,21 @@ body {
     color: white;
 }
 
+.footerDoSite {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.footerDoSite .about, .footerDoSite .turma, .footerDoSite .integrantes {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footerDoSite .about, .footerDoSite .turma, .footerDoSite .integrantes h3 {
+    font-family: "Pixelify sand", sans-serif;
+    color: gray;
+}
+
