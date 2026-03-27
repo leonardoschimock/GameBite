@@ -8,7 +8,7 @@ header h1 {
 
 header {
     height: 400px;
-    background-image: url(/menuReceitas/assets/headerImage.jpg);
+    background-image: url(/menuReceitas/assets/Images/Page/headerImage.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -54,7 +54,7 @@ body {
 }
 
 
-.containerJogoUm {
+.card {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -65,7 +65,7 @@ body {
     margin: 10px;
 }
 
-.containerJogoUm img {
+.card img {
     height: 150px;
     width: 150px;
 }
@@ -87,3 +87,4 @@ body {
 .info h2, p {
     color: white;
 }
+
