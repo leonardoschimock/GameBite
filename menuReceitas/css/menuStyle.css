@@ -6,6 +6,13 @@ header h1 {
     font-size: 50px;
 }
 
+header {
+    height: 400px;
+    background-image: url(/menuReceitas/assets/headerImage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 nav{
     width: 100%;
     background: black;
@@ -33,15 +40,50 @@ nav a:hover{
     color: white;
 }
 
-
-header {
-    height: 400px;
-    background-image: url(/menuReceitas/assets/headerImage.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
 body {
     background-color: black;
     margin: 0;
+}
+
+.receitas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.containerJogoUm {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    margin: 10px;
+}
+
+.containerJogoUm img {
+    height: 150px;
+    width: 150px;
+}
+
+.logo {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.info h2, p {
+    color: white;
 }
