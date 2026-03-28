@@ -93,7 +93,9 @@ body {
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap;
-    background-color: black;
+    background-color:rgb(0, 6, 20);
+    padding: 40px 5%;
+    margin-top: 120px;
 }
 
 .footerDoSite .about, .footerDoSite .turma, .footerDoSite .integrantes {
@@ -101,8 +103,42 @@ body {
     min-width: 250px;
 }
 
-.footerDoSite .about, .footerDoSite .turma, .footerDoSite .integrantes h3 {
-    font-family: "Pixelify sand", sans-serif;
-    color: gray;
+
+.about h3 {
+    font-family: "Pixelify sans", sans-serif;
+    color: yellow;
+    text-align: center;
+    -webkit-text-stroke: 0.1px white;
 }
 
+.turma h3 {
+    font-family: "Pixelify sans", sans-serif;
+    color: yellow;
+    text-align: center;
+    -webkit-text-stroke: 0.1px white;
+}
+
+.integrantes h3 {
+    font-family: "Pixelify sans", sans-serif;
+    color: yellow;
+    text-align: center;
+    -webkit-text-stroke: 0.1px white;
+}
+
+.turma p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.about p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.integrantes p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: center;
+}
