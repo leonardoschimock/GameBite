@@ -51,6 +51,7 @@ body {
     gap: 40px;
     max-width: 1000px;
     margin: auto;
+    perspective: 1000px;
 }
 
 
@@ -63,11 +64,18 @@ body {
     padding: 20px;
     position: relative;
     margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
     height: 150px;
     width: 150px;
+    border-radius: 5px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px yellow;
 }
 
 .logo {
