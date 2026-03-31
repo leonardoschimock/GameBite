@@ -1,19 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<!-- Lembrar de mudar todos os endereços nos arquivos dos jogos correspondentes -->
+
 <head>
+    <title>Menu Principal</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameBite</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="header">
+    <header>
         <h1>GameBite</h1>
-        <h2>Sua página de receitas gamer.</h2>
+            <nav>
+                <a href="#">Inicio</a> <!-- Linkar com o footer, criar id -->
+                <span>|</span>
+                <a href="#">Sobre nós</a> <!-- Linkar com o footer, criar id -->
+                <span>|</span>
+                <a href="#">Turma</a> <!-- Linkar com o footer, criar id -->
+                <span>|</span>
+                <a href="#">Integrantes</a> <!-- Linkar com o footer, criar id -->
+                <span>|</span>
+                <a href="#">Jogos</a> <!-- Linkar com o footer, criar id -->
+            </nav>
+    </header>
+
+    <section class="menu">
+
+   <div class="banner">
+    <div class="slides">
+        <img src="assets/images/Minecraft2.jpg" class="slide">
+        <img src="menuReceitas/assets/Images/Minecraft/minecraftLogo.jpg" class="slide">
+        <img src="assets/images/Minecraft.jpg" class="slide">
     </div>
 
+    <!-- Setas -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</div>
+
+<div class="busca">
+    <input type="text" id="searchInput" placeholder="Buscar Jogo...">
+</div>
+
+    <!-- Cards dosJogos -->
+    <div class="cards">
+
+        <div class="card">
+            <img src="assets/images/LogoMine.jpg" alt="">
+            <h3>Minecraft</h3>
+            <p>Jogo de aventura</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/images/Overcooked.jpg" alt="">
+            <h3>overcooked</h3>
+            <p>Jogo de cozinhar</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/images/Terraria.jpg" alt="">
+            <h3>terraria</h3>
+            <p>açao e aventura</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footerDoSite">
+        <div class="about">
+            <h3>Sobre Nós</h3>
+            <p>A GameBite é pra quem ama games e quer levar essa paixão pra cozinha. 
+                Aqui você encontra receitas inspiradas nos seus jogos favoritos pra 
+                finalmente provar aquelas comidas que sempre deram vontade. Bora matar 
+                a nostalgia, testar coisas novas e transformar o mundo gamer em algo real — e delicioso!</p>
+        </div>
+        <div class="turma">
+            <h3>Nossa Turma</h3>
+            <p>
+                Centro Universitário Cesumar <br><br>
+                Engenharia de Software <br><br>
+                ESOFT B Noturno <br><br>
+            </p>
+        </div>
+        <div class="integrantes">
+        <h3>Desenvolvedores do Site</h3>
+        <p>Jean Carlos Siqueira dos Santos <br><br>
+        Leonardo Schimock Silveira <br><br>
+        Thiago de Barros Inácio <br><br></p>
+        </div>
+    </footer>
 </body>
 </html>
