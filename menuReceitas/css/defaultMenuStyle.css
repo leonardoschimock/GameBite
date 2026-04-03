@@ -154,3 +154,27 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+/**************************************************************************************************/
+
+.highlight h3,
+.highlight p {
+    animation: piscarTexto 1s ease-in-out ;
+}
+
+@keyframes piscarTexto {
+    0% {
+        -webkit-text-stroke: 0.1px white;
+        text-shadow: none;
+    }
+
+    50% {
+        -webkit-text-stroke: 0.1px white;
+        text-shadow: 0 0 5px yellow, 0 0 5px yellow;
+    }
+
+    100% {
+        -webkit-text-stroke: 0.1px white;
+        text-shadow: none;
+    }
+}
