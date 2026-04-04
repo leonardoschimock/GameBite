@@ -155,8 +155,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/**************************************************************************************************/
-
 .highlight h3,
 .highlight p {
     animation: piscarTexto 1s ease-in-out ;
@@ -178,3 +176,4 @@ html {
         text-shadow: none;
     }
 }
+

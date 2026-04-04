@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         elemento.classList.remove("highlight");
                     }, 2000);
 
-                }, 600); // espera o scroll terminar
+                }, 600);
 
             }
 
