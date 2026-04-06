@@ -1,31 +1,76 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // SLIDER
+    // ===== CARROSSEL =====
     let slides = document.querySelectorAll('.slide');
-    let index = 0;
+    let indice = 0;
 
-    function showSlide(i) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        slides[i].classList.add('active');
+    function mostrarSlide(i) {
+        slides.forEach(slide => slide.classList.remove('ativo'));
+        slides[i].classList.add('ativo');
     }
 
-    document.querySelector('.next').addEventListener('click', () => {
-        index = (index + 1) % slides.length;
-        showSlide(index);
-    });
+    const botaoProximo = document.querySelector('.next');
+    const botaoAnterior = document.querySelector('.prev');
 
-    document.querySelector('.prev').addEventListener('click', () => {
-        index = (index - 1 + slides.length) % slides.length;
-        showSlide(index);
-    });
+    if (botaoProximo && botaoAnterior) {
 
+        botaoProximo.addEventListener('click', () => {
+            indice = (indice + 1) % slides.length;
+            mostrarSlide(indice);
+        });
+
+        botaoAnterior.addEventListener('click', () => {
+            indice = (indice - 1 + slides.length) % slides.length;
+            mostrarSlide(indice);
+        });
+    }
+
+    // troca automática
     setInterval(() => {
-        index = (index + 1) % slides.length;
-        showSlide(index);
+        indice = (indice + 1) % slides.length;
+        mostrarSlide(indice);
     }, 5000);
 
-    showSlide(index);
+    // mostra o primeiro slide
+    mostrarSlide(indice);
 
-    // BUSCA
-    ativarBusca();
+
+    // ===== BUSCA =====
+    const campoBusca = document.getElementById("searchInput");
+const container = document.querySelector(".cards");
+
+if (campoBusca) {
+    campoBusca.addEventListener("input", () => {
+
+        const filtro = campoBusca.value.toLowerCase();
+        const cards = Array.from(container.querySelectorAll(".card-link"));
+
+        cards.forEach(card => {
+            const texto = card.textContent.toLowerCase();
+
+            if (texto.includes(filtro)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        // reordena após filtrar
+        ordenarCards();
+    });
+}
+
+    function ordenarCards() {
+    const container = document.querySelector(".cards");
+    const cards = Array.from(container.querySelectorAll(".card-link"));
+
+    cards.sort((a, b) => {
+        const nomeA = a.textContent.trim().toLowerCase();
+        const nomeB = b.textContent.trim().toLowerCase();
+        return nomeA.localeCompare(nomeB);
+    });
+
+    cards.forEach(card => container.appendChild(card));
+    }
+
 });

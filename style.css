@@ -51,6 +51,8 @@ body {
     height: 200px;
     overflow: hidden;
     margin-bottom: 30px;
+    margin-top: 0;
+
 }
 
 .banner img {
@@ -60,7 +62,7 @@ body {
 }
 
 .busca input {
-    width: 60%;
+    width: 20%;
     padding: 12px 20px;
     border-radius: 25px;
     border: none;
@@ -84,17 +86,33 @@ body {
 }
 
 .card {
-    background: white;
-    border-radius: 10px;
+    width: 300px;
+    background-color: #020f2a; /* mesmo fundo */
+    border-radius: 15px;
     overflow: hidden;
-    text-align: center;
-    transition: 0.3s;
+    border: 2px solid #ccc;
+
+    transition: transform 0.3s;
+    padding: 25px;
+    cursor: pointer;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px yellow;
 }
 
 .card img {
-    width: 200%;
-    height: 300px;
-    object-fit: cover;
+    width: 100%;
+    height: 200px;
+
+    object-fit: contain; /* 🔥 não corta */
+    background-color: #000; /* fundo atrás da imagem */
+
+    display: block;
+    border-radius: 15px;
+    margin-bottom: 10px;
 }
 
 .card h3 {
@@ -103,26 +121,47 @@ body {
 }
 
 .card p {
-    font-size: 14px;
+    font-size: 16px;
     padding: 0 10px 15px;
     color: black;
 }
 
-.card:hover {
-    transform: scale(1.05);
+.card-content {
+    padding: 15px;
+    text-align: center;
+        padding-bottom: 0px;
+
+}
+
+.card-content h3 {
+    color: white;
+    margin: 0;
+    
+}
+
+.card-content p {
+    color: #ccc;
+    margin-top: 8px;
+    font-size: 19px;
+    
+}
+
+.card-link {
+    text-decoration: none; /* remove sublinhado */
+    color: inherit;        /* mantém cor */
 }
 
 .banner {
-    width: 800px;          /* tamanho do slider */
-    max-width: 90%;        /* responsivo */
-    height: 300px;
+    width: 600px;
+    height: 350px;
 
-    margin: 40px auto;     /* CENTRALIZA */
+    margin: 40px auto;
+
+    border-radius: 15px;
+    overflow: hidden; /* 🔥 corta certinho igual card */
+    border: 2px solid #ccc;
 
     position: relative;
-    overflow: hidden;
-
-    border-radius: 10px;   /* opcional (fica bonito) */
 }
 
 .slide {
@@ -130,14 +169,13 @@ body {
     width: 100%;
     height: 100%;
 
-    object-fit: contain;   /* mostra a imagem inteira */
-    background-color: black;
+    object-fit: cover; /* 🔥 igual card (preenche bonito) */
 
     opacity: 0;
     transition: opacity 1s;
 }
 
-.slide.active {
+.slide.ativo {
     opacity: 1;
 }
 
