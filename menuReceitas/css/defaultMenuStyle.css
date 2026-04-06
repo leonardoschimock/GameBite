@@ -1,16 +1,22 @@
-header h1 {
-    font-family: "Sixtyfour", sans-serif;
-    font-style: normal;
-    color: yellow;
-    text-align: center;
-    font-size: 50px;
+*{
+    box-sizing: border-box;
 }
 
-header {
-    height: 400px;
-    background-image: url(/menuReceitas/assets/Images/Page/headerImage.png);
-    background-size: cover;
-    background-position: center;
+body {
+    background-color: rgb(0, 10, 32);
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+}
+
+header h1{
+    font-family: "Sixtyfour", sans-serif;
+    color: yellow;
+    font-size: clamp(40px,6vw,70px);
+    margin: clamp(10px, 2vw, 20px) 0 5px 0;
 }
 
 nav{
@@ -19,15 +25,17 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    flex-wrap: wrap;
+    gap: clamp(10px,2vw,25px);
+    padding: 10px 0 20px 0;
 }
 
 nav a{
-    font-family: "Pixelify sans", sans-serif;
+    font-family: "Pixelify Sans", sans-serif;
     text-decoration: none;
     color: yellow;
-    font-size: 20px;
-    padding: 0 100px;
+    font-size: clamp(14px,2vw,22px);
+    padding: 0 10px;
     -webkit-text-stroke: 0.2px white;
 }
 
@@ -40,37 +48,40 @@ nav a:hover{
     color: white;
 }
 
-body {
-    background-color: rgb(0, 10, 32);
-    margin: 0;
+.headerImage{
+    width: 100%;
+    height: clamp(150px,20vw,280px);
+    background-image: url(/menuReceitas/assets/Images/Page/headerImage.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .receitas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1000px;
-    margin: auto;
-    perspective: 1000px;
+    gap: clamp(20px,4vw,40px);
+    width: 90%;
+    max-width: 1100px;
+    margin: clamp(20px, 4vw, 40px) auto;
 }
-
 
 .card {
     display: flex;
     align-items: center;
-    gap: 20px;
-    border: 3px solid white;
+    gap: clamp(10px,2vw,20px);
+    border: 3px solid yellow;
     border-radius: 15px;
-    padding: 20px;
+    padding: clamp(10px,2vw,20px);
     position: relative;
-    margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
-    height: 150px;
-    width: 150px;
+    width: clamp(90px,12vw,150px);
+    height: clamp(90px,12vw,150px);
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .card:hover {
@@ -80,20 +91,31 @@ body {
 
 .logo {
     position: absolute;
-    top: -30px;
-    right: -30px;
-    padding: 8px 12px;
-    border-radius: 20px;
+    top: -25px;
+    right: -25px;
 }
 
 .logo img {
-    height: 50px;
-    width: 50px;
+    width: clamp(35px,5vw,50px);
+    height: clamp(35px,5vw,50px);
     border-radius: 50%;
 }
 
-.info h2, p {
+.info h2{
     color: white;
+    font-size: clamp(18px,2vw,26px);
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    -webkit-text-stroke: 0.1px white;
+}
+
+.info p{
+    color: white;
+    font-size: clamp(12px,1.5vw,16px);
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 300;
+    text-align: justify;
 }
 
 .footerDoSite {
@@ -106,49 +128,35 @@ body {
     margin-top: 120px;
 }
 
-.footerDoSite .about, .footerDoSite .turma, .footerDoSite .integrantes {
+.footerDoSite .about,
+.footerDoSite .turma,
+.footerDoSite .integrantes {
     flex: 1;
     min-width: 250px;
 }
 
-
-.about h3 {
-    font-family: "Pixelify sans", sans-serif;
+.about h3,
+.turma h3,
+.integrantes h3{
+    font-family: "Pixelify Sans", sans-serif;
     color: yellow;
     text-align: center;
     -webkit-text-stroke: 0.1px white;
 }
 
-.turma h3 {
-    font-family: "Pixelify sans", sans-serif;
-    color: yellow;
-    text-align: center;
-    -webkit-text-stroke: 0.1px white;
-}
-
-.integrantes h3 {
-    font-family: "Pixelify sans", sans-serif;
-    color: yellow;
-    text-align: center;
-    -webkit-text-stroke: 0.1px white;
-}
-
-.turma p {
+.turma p,
+.integrantes p{
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
     text-align: center;
+    color: white;
 }
 
-.about p {
+.about p{
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
     text-align: justify;
-}
-
-.integrantes p {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
-    text-align: center;
+    color: white;
 }
 
 html {
@@ -161,6 +169,7 @@ html {
 }
 
 @keyframes piscarTexto {
+
     0% {
         -webkit-text-stroke: 0.1px white;
         text-shadow: none;
@@ -175,5 +184,5 @@ html {
         -webkit-text-stroke: 0.1px white;
         text-shadow: none;
     }
-}
 
+}
