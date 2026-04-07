@@ -5,23 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
     links.forEach(link => {
         link.addEventListener("click", function () {
 
-            const idDestino = this.getAttribute("href").substring(1);
-            const elemento = document.getElementById(idDestino);
+            const href = this.getAttribute("href");
 
-            if (elemento) {
+            if (href.startsWith("#")) {
 
-                setTimeout(() => {
+                const idDestino = href.substring(1);
+                const elemento = document.getElementById(idDestino);
 
-                    elemento.classList.add("highlight");
+                if (elemento) {
 
                     setTimeout(() => {
-                        elemento.classList.remove("highlight");
-                    }, 2000);
+                        elemento.classList.add("highlight");
 
-                }, 600);
+                        setTimeout(() => {
+                            elemento.classList.remove("highlight");
+                        }, 2000);
 
+                    }, 600);
+                }
             }
-
         });
     });
 

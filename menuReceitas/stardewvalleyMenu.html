@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<!-- Lembrar de mudar todos os endereços nos arquivos dos jogos correspondentes -->
-
 <head>
     <title>Menu de Receitas</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/defaultMenuStyle.css">
-    <script src="JavaScript/defaultMenuScript.js"></script>
+    <link rel="stylesheet" href="./css/defaultMenuStyle.css">
+    <script src="./JavaScript/defaultMenuScript.js" defer></script>
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
@@ -17,111 +16,135 @@
 </head>
 
 <body>
-    <header>
-        <h1>GameBite</h1>
-            <nav>
-                <a href="#">Inicio</a> <!-- Linkar com o footer, criar id -->
-                <span>|</span>
-                <a href="#footerAbout">Sobre nós</a> <!-- Linkar com o footer, criar id -->
-                <span>|</span>
-                <a href="#footerTurma">Turma</a> <!-- Linkar com o footer, criar id -->
-                <span>|</span>
-                <a href="#footerIntegrantes">Integrantes</a> <!-- Linkar com o footer, criar id -->
-                <span>|</span>
-                <a href="../index.html">Jogos</a> <!-- Linkar com o footer, criar id -->
-            </nav>
-        <div class="headerImage"></div>
-    </header>
 
+<header>
+    <h1>GameBite</h1>
+
+    <nav aria-label="Menu principal">
+        <a href="../index.html">Início</a>
+        <span>|</span>
+        <a href="#footerAbout">Sobre nós</a>
+        <span>|</span>
+        <a href="#footerTurma">Turma</a>
+        <span>|</span>
+        <a href="#footerIntegrantes">Integrantes</a>
+        <span>|</span>
+        <a href="../index.html">Jogos</a>
+    </nav>
+
+    <div class="headerImage" role="img" aria-label="Imagem temática do site GameBite"></div>
+</header>
+
+<main>
     <section class="receitas" id="receitas">
-        <div class="card" id="primeiraReceita">
-            <div class="logo" id="logoPrimeiraReceita">
-                <img src="/menuReceitas/assets/Images/StardewValley/stardewvalleyIcon.jpg" alt="Logo do Jogo"> <!-- Inserir Logo e alterar nome do jogo -->
+
+        <!-- CARD 1 -->
+        <article class="card" tabindex="0">
+            <div class="logo">
+                <img src="./assets/Images/StardewValley/stardewvalleyIcon.jpg"
+                    alt="Logo do jogo Stardew Valley">
             </div>
 
-                <img src="/menuReceitas/assets/Images/StardewValley/sopaDeAboboraIcon.jpg"> <!-- Imagem da receita -->
+            <img src="./assets/Images/StardewValley/sopaDeAboboraIcon.jpg"
+                alt="Imagem da Sopa de Abóbora de Stardew Valley">
 
-            <div class="info" id="infoPrimeiraReceita">
-                <h2>Sopa de Abóbora</h2> <!-- Colocar nome da Receita -->
-                <p>
-                    A sopa de abóbora é um prato quente e reconfortante. 
-                    Feita com ingredientes frescos da fazenda, é perfeita para recuperar energia após um longo dia de trabalho.
-                </p> <!-- Descrição rápida da receita -->
+            <div class="info">
+                <h2>Sopa de Abóbora</h2>
+                <p>A sopa de abóbora é um prato quente e reconfortante. 
+                    Feita com ingredientes frescos da fazenda, é perfeita para recuperar 
+                        energia após um longo dia de trabalho.</p>
             </div>
-        </div>
-        <div class="card" id="segundaReceita">
-            <div class="logo" id="logoSegundaReceita">
-                <img src="/menuReceitas/assets/Images/StardewValley/stardewvalleyIcon.jpg" alt="Logo do Jogo"> <!-- Inserir Logo e alterar nome do jogo -->
-            </div>
+        </article>
 
-                <img src="/menuReceitas/assets/Images/StardewValley/fruitSaladIcon.jpg"> <!-- Imagem da receita -->
-
-            <div class="info" id="infoSegundaReceita">
-                <h2>Salada de Frutas</h2> <!-- Colocar nome da Receita -->
-                <p>
-                    A salada de frutas é uma receita refrescante feita com diferentes frutas cultivadas na fazenda. 
-                    Colorida e nutritiva, é uma ótima opção para restaurar energia de forma leve.
-                </p> <!-- Descrição rápida da receita -->
-            </div>
-        </div>
-        <div class="card" id="terceiraReceita">
-            <div class="logo" id="logoTerceiraReceita">
-                <img src="/menuReceitas/assets/Images/StardewValley/stardewvalleyIcon.jpg" alt="Logo do Jogo"> <!-- Inserir Logo e alterar nome do jogo -->
+        <!-- CARD 2 -->
+        <article class="card" tabindex="0">
+            <div class="logo">
+                <img src="./assets/Images/StardewValley/stardewvalleyIcon.jpg"
+                    alt="Logo do jogo Stardew Valley">
             </div>
 
-                <img src="/menuReceitas/assets/Images/StardewValley/omeleteIcon.jpg"> <!-- Imagem da receita -->
+            <img src="./assets/Images/StardewValley/fruitSaladIcon.jpg"
+                alt="Imagem da Salada de Frutas de Stardew Valley">
 
-            <div class="info" id="infoTerceiraReceita">
-                <h2>Omelete</h2> <!-- Colocar nome da Receita -->
-                <p>
-                    A omelete é uma receita simples preparada com ovos frescos da fazenda. 
-                    Nutritiva e rápida de fazer, é perfeita para manter o fazendeiro cheio de energia durante as atividades do dia.
-                </p> <!-- Descrição rápida da receita -->
+            <div class="info">
+                <h2>Salada de Frutas</h2>
+                <p>A salada de frutas é uma receita refrescante feita com diferentes 
+                    frutas cultivadas na fazenda. Colorida e nutritiva, é uma ótima 
+                        opção para restaurar energia de forma leve.</p>
             </div>
-        </div>
-        <div class="card" id="quartaReceita">
-            <div class="logo" id="logoQuartaReceita">
-                <img src="/menuReceitas/assets/Images/StardewValley/stardewvalleyIcon.jpg" alt="Logo do Jogo"> <!-- Inserir Logo e alterar nome do jogo -->
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card" tabindex="0">
+            <div class="logo">
+                <img src="./assets/Images/StardewValley/stardewvalleyIcon.jpg"
+                    alt="Logo do jogo Stardew Valley">
             </div>
 
-                <img src="/menuReceitas/assets/Images/StardewValley/panquecaIcon.jpg"> <!-- Imagem da receita -->
+            <img src="./assets/Images/StardewValley/omeleteIcon.jpg"
+                alt="Imagem do omelete de Stardew Valley">
 
-            <div class="info" id="infoQuartaReceita">
-                <h2>Panquecas</h2> <!-- Colocar nome da Receita -->
-                <p>
-                    A panqueca é um café da manhã clássico na fazenda. 
-                    Feita com ingredientes simples, ela é um prato saboroso que fornece bastante energia para começar o dia.
-                </p> <!-- Descrição rápida da receita -->
+            <div class="info">
+                <h2>Omelete</h2>
+                <p>A omelete é uma receita simples preparada com ovos frescos da fazenda. 
+                    Nutritiva e rápida de fazer, é perfeita para manter o fazendeiro 
+                        cheio de energia durante as atividades do dia.</p>
             </div>
-        </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="card" tabindex="0">
+            <div class="logo">
+                <img src="./assets/Images/StardewValley/stardewvalleyIcon.jpg"
+                    alt="Logo do jogo Stardew Valley">
+            </div>
+
+            <img src="./assets/Images/StardewValley/panquecaIcon.jpg"
+                alt="Imagem de panquecas de Stardew Valley">
+
+            <div class="info">
+                <h2>Panquecas</h2>
+                <p>A panqueca é um café da manhã clássico na fazenda. 
+                    Feita com ingredientes simples, ela é um prato saboroso que 
+                        fornece bastante energia para começar o dia.</p>
+            </div>
+        </article>
+
     </section>
+</main>
 
-    <footer class="footerDoSite" id="footer">
-        <div class="about" id="footerAbout">
-            <h3>Sobre Nós</h3>
-            <p>
-                A GameBite é pra quem ama games e quer levar essa paixão pra cozinha. 
-                Aqui você encontra receitas inspiradas nos seus jogos favoritos pra 
-                finalmente provar aquelas comidas que sempre deram vontade. Bora matar 
-                a nostalgia, testar coisas novas e transformar o mundo gamer em algo real e delicioso!
-            </p>
-        </div>
-        <div class="turma" id="footerTurma">
-            <h3>Nossa Turma</h3>
-            <p>
-                Centro Universitário Cesumar <br><br>
-                Engenharia de Software <br><br>
-                ESOFT B Noturno <br><br>
-            </p>
-        </div>
-        <div class="integrantes" id="footerIntegrantes">
-        <h3>Desenvolvedores do Site</h3>
+<footer class="footerDoSite" id="footer">
+
+    <div class="about" id="footerAbout">
+        <h3>Sobre Nós</h3>
+        <p>
+            A GameBite é pra quem ama games e quer levar essa paixão pra cozinha.
+            Aqui você encontra receitas inspiradas nos seus jogos favoritos pra
+            finalmente provar aquelas comidas que sempre deram vontade.
+            Bora matar a nostalgia, testar coisas novas e transformar o mundo gamer
+            em algo real e delicioso!
+        </p>
+    </div>
+
+    <div class="turma" id="footerTurma">
+        <h3>Nossa Turma</h3>
+        <p>
+            Centro Universitário Cesumar <br><br>
+            Engenharia de Software <br><br>
+            ESOFT B Noturno
+        </p>
+    </div>
+
+    <div class="integrantes" id="footerIntegrantes">
+        <h3>Desenvolvedores</h3>
         <p>
             Jean Carlos Siqueira dos Santos <br><br>
             Leonardo Schimock Silveira <br><br>
-            Thiago de Barros Inácio <br><br>
+            Thiago de Barros Inácio
         </p>
-        </div>
-    </footer>
+    </div>
+
+</footer>
+
 </body>
 </html>

@@ -7,6 +7,24 @@ body {
     margin: 0;
 }
 
+a:focus-visible, .card:focus-visible {
+    outline: 3px solid yellow;
+    outline-offset: 3px;
+}
+
+a:focus {
+    outline: none;
+}
+
+.card:focus {
+    outline: none;
+}
+
+a:focus-visible, .card:focus-visible {
+    outline: 3px solid yellow;
+    outline-offset: 3px;
+}
+
 header{
     width: 100%;
     text-align: center;
@@ -44,14 +62,15 @@ nav span {
     -webkit-text-stroke: 0.2px white;
 }
 
-nav a:hover{
+nav a:hover,
+nav a:focus {
     color: white;
 }
 
 .headerImage{
     width: 100%;
     height: clamp(150px,20vw,280px);
-    background-image: url(/menuReceitas/assets/Images/Page/headerImage.png);
+    background-image: url(../assets/Images/Page/headerImage.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -84,7 +103,8 @@ nav a:hover{
     object-fit: cover;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
     transform: scale(1.05);
     box-shadow: 0 15px 30px yellow;
 }
@@ -185,4 +205,16 @@ html {
         text-shadow: none;
     }
 
+}
+
+@media (max-width: 768px) {
+    .receitas {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        align-items: center;
+    }
 }

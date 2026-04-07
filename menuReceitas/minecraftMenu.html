@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<!-- Lembrar de mudar todos os endereços nos arquivos dos jogos correspondentes -->
-
 <head>
     <title>Menu de Receitas</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/defaultMenuStyle.css">
-    <script src="JavaScript/defaultMenuScript.js"></script>
+    <link rel="stylesheet" href="./css/defaultMenuStyle.css">
+    <script src="./JavaScript/defaultMenuScript.js" defer></script>
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
@@ -17,111 +16,135 @@
 </head>
 
 <body>
-    <header>
-        <h1>GameBite</h1>
-            <nav>
-                <a href="#">Inicio</a> <!-- Linkar com o footer, criar id -->
-                <span>|</span>
-                <a href="#footerAbout">Sobre nós</a> <!-- Linkar com o footer, criar id -->
-                <span>|</span>
-                <a href="#footerTurma">Turma</a> <!-- Linkar com o footer, criar id -->
-                <span>|</span>
-                <a href="#footerIntegrantes">Integrantes</a> <!-- Linkar com o footer, criar id -->
-                <span>|</span>
-                <a href="../index.html">Jogos</a> <!-- Linkar com o footer, criar id -->
-            </nav>
-        <div class="headerImage"></div>
-    </header>
 
+<header>
+    <h1>GameBite</h1>
+
+    <nav aria-label="Menu principal">
+        <a href="../index.html">Início</a>
+        <span>|</span>
+        <a href="#footerAbout">Sobre nós</a>
+        <span>|</span>
+        <a href="#footerTurma">Turma</a>
+        <span>|</span>
+        <a href="#footerIntegrantes">Integrantes</a>
+        <span>|</span>
+        <a href="../index.html">Jogos</a>
+    </nav>
+
+    <div class="headerImage" role="img" aria-label="Imagem temática do site GameBite"></div>
+</header>
+
+<main>
     <section class="receitas" id="receitas">
-        <div class="card" id="primeiraReceita">
-            <div class="logo" id="logoPrimeiraReceita">
-                <img src="/menuReceitas/assets/Images/Minecraft/minecraftLogo.jpg" alt="Logo do Jogo"> <!-- Inserir Logo e alterar nome do jogo -->
+
+        <!-- CARD 1 -->
+        <article class="card" tabindex="0">
+            <div class="logo">
+                <img src="./assets/Images/Minecraft/minecraftLogo.jpg"
+                    alt="Logo do creeper minecraft">
             </div>
 
-                <img src="/menuReceitas/assets/Images/Minecraft/cookieIcon.jpg"> <!-- Imagem da receita -->
+            <img src="./assets/Images/Minecraft/cookieIcon.jpg"
+                alt="Imagem cookie do minecraft">
 
-            <div class="info" id="infoPrimeiraReceita">
-                <h2>Cookie</h2> <!-- Colocar nome da Receita -->
-                <p>
-                    O cookie é um doce simples feito com trigo e grãos de cacau. 
-                    Pequeno e prático, ele é perfeito para um lanche rápido durante as aventuras.
-                </p> <!-- Descrição rápida da receita -->
+            <div class="info">
+                <h2>Cookie</h2>
+                <p>O cookie é um doce simples feito com trigo e grãos de cacau. 
+                    Pequeno e prático, ele é perfeito para um lanche rápido durante 
+                        as aventuras.</p>
             </div>
-        </div>
-        <div class="card" id="segundaReceita">
-            <div class="logo" id="logoSegundaReceita">
-                <img src="/menuReceitas/assets/Images/Minecraft/minecraftLogo.jpg" alt="Logo do Jogo"> <!-- Inserir Logo e alterar nome do jogo -->
-            </div>
+        </article>
 
-                <img src="/menuReceitas/assets/Images/Minecraft/boloIcon.jpg"> <!-- Imagem da receita -->
-
-            <div class="info" id="infoSegundaReceita">
-                <h2>Bolo</h2> <!-- Colocar nome da Receita -->
-                <p>
-                    O bolo é uma sobremesa especial que pode ser colocada no mundo e consumida em várias fatias. 
-                    Feito com leite, ovos, açúcar e trigo, é perfeito para compartilhar com outros jogadores.
-                </p> <!-- Descrição rápida da receita -->
-            </div>
-        </div>
-        <div class="card" id="terceiraReceita">
-            <div class="logo" id="logoTerceiraReceita">
-                <img src="/menuReceitas/assets/Images/Minecraft/minecraftLogo.jpg" alt="Logo do Jogo"> <!-- Inserir Logo e alterar nome do jogo -->
+        <!-- CARD 2 -->
+        <article class="card" tabindex="0">
+            <div class="logo">
+                <img src="./assets/Images/Minecraft/minecraftLogo.jpg"
+                    alt="Logo do creeper minecraft">
             </div>
 
-                <img src="/menuReceitas/assets/Images/Minecraft/iconBread.jpg"> <!-- Imagem da receita -->
+            <img src="./assets/Images/Minecraft/boloIcon.jpg"
+                alt="Imagem bolo do minecraft">
 
-            <div class="info" id="infoTerceiraReceita">
-                <h2>Pão</h2> <!-- Colocar nome da Receita -->
-                <p>
-                    O pão é um dos alimentos mais básicos e fáceis de fazer no Minecraft. 
-                    Produzido a partir de trigo, ele é uma ótima fonte de energia para começar a sobrevivência.
-                </p> <!-- Descrição rápida da receita -->
+            <div class="info">
+                <h2>Bolo</h2>
+                <p>O bolo é uma sobremesa especial que pode ser colocada no mundo e 
+                    consumida em várias fatias. Feito com leite, ovos, açúcar e trigo, 
+                        é perfeito para compartilhar com outros jogadores.</p>
             </div>
-        </div>
-        <div class="card" id="quartaReceita">
-            <div class="logo" id="logoQuartaReceita">
-                <img src="/menuReceitas/assets/Images/Minecraft/minecraftLogo.jpg" alt="Logo do Jogo"> <!-- Inserir Logo e alterar nome do jogo -->
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card" tabindex="0">
+            <div class="logo">
+                <img src="./assets/Images/Minecraft/minecraftLogo.jpg"
+                    alt="Logo do creeper minecraft">
             </div>
 
-                <img src="/menuReceitas/assets/Images/Minecraft/iconTorta.jpg"> <!-- Imagem da receita -->
+            <img src="./assets/Images/Minecraft/iconBread.jpg"
+                alt="Imagem pão do minecraft">
 
-            <div class="info" id="infoQuartaReceita">
-                <h2>Torta de Abóbora</h2> <!-- Colocar nome da Receita -->
-                <p>
-                    A torta de abóbora é um doce nutritivo feito com abóbora, açúcar e ovo. 
-                    É uma das comidas mais completas do jogo e ideal para recuperar bastante energia.
-                </p> <!-- Descrição rápida da receita -->
+            <div class="info">
+                <h2>Pão</h2>
+                <p>O pão é um dos alimentos mais básicos e fáceis de fazer no Minecraft. 
+                    Produzido a partir de trigo, ele é uma ótima fonte de energia para 
+                        começar a sobrevivência.</p>
             </div>
-        </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="card" tabindex="0">
+            <div class="logo">
+                <img src="./assets/Images/Minecraft/minecraftLogo.jpg"
+                    alt="Logo do creeper minecraft">
+            </div>
+
+            <img src="./assets/Images/Minecraft/iconTorta.jpg"
+                alt="Imagem torta de abóbora do minecraft">
+
+            <div class="info">
+                <h2>Torta de Abóbora</h2>
+                <p>A torta de abóbora é um doce nutritivo feito com abóbora, açúcar e ovo. 
+                    É uma das comidas mais completas do jogo e ideal para recuperar 
+                        bastante energia.</p>
+            </div>
+        </article>
+
     </section>
+</main>
 
-    <footer class="footerDoSite" id="footer">
-        <div class="about" id="footerAbout">
-            <h3>Sobre Nós</h3>
-            <p>
-                A GameBite é pra quem ama games e quer levar essa paixão pra cozinha. 
-                Aqui você encontra receitas inspiradas nos seus jogos favoritos pra 
-                finalmente provar aquelas comidas que sempre deram vontade. Bora matar 
-                a nostalgia, testar coisas novas e transformar o mundo gamer em algo real e delicioso!
-            </p>
-        </div>
-        <div class="turma" id="footerTurma">
-            <h3>Nossa Turma</h3>
-            <p>
-                Centro Universitário Cesumar <br><br>
-                Engenharia de Software <br><br>
-                ESOFT B Noturno <br><br>
-            </p>
-        </div>
-        <div class="integrantes" id="footerIntegrantes">
-        <h3>Desenvolvedores do Site</h3>
+<footer class="footerDoSite" id="footer">
+
+    <div class="about" id="footerAbout">
+        <h3>Sobre Nós</h3>
+        <p>
+            A GameBite é pra quem ama games e quer levar essa paixão pra cozinha.
+            Aqui você encontra receitas inspiradas nos seus jogos favoritos pra
+            finalmente provar aquelas comidas que sempre deram vontade.
+            Bora matar a nostalgia, testar coisas novas e transformar o mundo gamer
+            em algo real e delicioso!
+        </p>
+    </div>
+
+    <div class="turma" id="footerTurma">
+        <h3>Nossa Turma</h3>
+        <p>
+            Centro Universitário Cesumar <br><br>
+            Engenharia de Software <br><br>
+            ESOFT B Noturno
+        </p>
+    </div>
+
+    <div class="integrantes" id="footerIntegrantes">
+        <h3>Desenvolvedores</h3>
         <p>
             Jean Carlos Siqueira dos Santos <br><br>
             Leonardo Schimock Silveira <br><br>
-            Thiago de Barros Inácio <br><br>
+            Thiago de Barros Inácio
         </p>
-        </div>
-    </footer>
+    </div>
+
+</footer>
+
 </body>
 </html>
