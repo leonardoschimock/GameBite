@@ -45,19 +45,25 @@ body {
     margin: 0;
 }
 
+/**************************************************************************************************/
+
 .receitas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    max-width: 1000px;
+    max-width: 1600px;
     margin: auto;
     perspective: 1000px;
+}
+
+#infoPreparo li {
+    line-height: px;
 }
 
 #Receita,
 #Preparo {
     min-height: 300px;
-    padding: 15px;
+    padding: 25px;
 }
 
 #inGame {
@@ -69,7 +75,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 30px;
-    border: 3px solid white;
+    border: 9px solid rgb(53, 228, 0);
     border-radius: 15px;
     padding: 50px;
     position: relative;
@@ -77,8 +83,24 @@ body {
 }
 
 .card img {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.receitas {
+    color: white;
+    font-size: clamp(18px,2vw,26px);
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    -webkit-text-stroke: 0.1px white;
+}
+
+#inGame img {
     height: 300px;
-    width: 300px;
+    width: 700px;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -96,6 +118,28 @@ body {
     width: 100px;
     border-radius: 100%;
 }
+
+/**************************************************************************************************/
+
+.card #Minecraft{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    border: 9px solid rgb(48, 128, 29);
+    border-radius: 15px;
+    padding: 50px;
+    position: relative;
+    margin: 10px;
+}
+
+#Minecraft img {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/**************************************************************************************************/
 
 .info h2, p, ul, ol {
     color: white;
@@ -129,6 +173,8 @@ body {
     padding-left: 20px;
     line-height: 28px;
 }
+
+/**************************************************************************************************/
 
 .footerDoSite {
     display: flex;

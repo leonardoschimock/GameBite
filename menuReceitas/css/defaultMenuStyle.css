@@ -111,14 +111,17 @@ nav a:focus {
 
 .logo {
     position: absolute;
-    top: -25px;
-    right: -25px;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
 }
 
 .logo img {
     width: clamp(35px,5vw,50px);
     height: clamp(35px,5vw,50px);
     border-radius: 50%;
+    border: 2px solid yellow;
+    background-color: rgb(0, 10, 32);
 }
 
 .info h2{
