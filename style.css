@@ -201,6 +201,52 @@ nav a:focus {
     color: inherit;
 }
 
+.form-section {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.form-section h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#formSugestao {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formSugestao input,
+#formSugestao textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid yellow;
+    background-color: #001a3d;
+    color: white;
+}
+
+#formSugestao textarea {
+    resize: none;
+    height: 100px;
+}
+
+#formSugestao button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: yellow;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#msgErro {
+    color: red;
+    font-size: 14px;
+}
+
 /* FOOTER */
 .footerDoSite {
     display: flex;

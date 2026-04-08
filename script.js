@@ -75,6 +75,39 @@ if (campoBusca) {
 
 });
 
+// FORMULÁRIO
+const form = document.getElementById("formSugestao");
+const msgErro = document.getElementById("msgErro");
+
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const jogo = document.getElementById("jogo").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        // validação
+        if (nome === "" || email === "" || jogo === "" || mensagem === "") {
+            msgErro.textContent = "Preencha todos os campos!";
+            return;
+        }
+
+        // valida email simples
+        if (!email.includes("@") || !email.includes(".")) {
+            msgErro.textContent = "Email inválido!";
+            return;
+        }
+
+        // sucesso
+        msgErro.style.color = "lightgreen";
+        msgErro.textContent = "Sugestão enviada com sucesso! 🎉";
+
+        form.reset();
+    });
+}
+
 // ===== HIGHLIGHT DO FOOTER =====
 const links = document.querySelectorAll("nav a");
 
