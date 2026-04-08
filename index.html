@@ -1,31 +1,54 @@
 <!DOCTYPE html>
+<!-- Define que o documento é HTML5 -->
+
 <html lang="pt-br">
+<!-- Define o idioma como português do Brasil -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Permite acentuação (UTF-8) -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsividade (adapta para celular) -->
+
     <title>Menu Principal</title>
+    <!-- Título da aba do navegador -->
 
     <link rel="stylesheet" href="style.css">
+    <!-- Conecta o CSS -->
 
-    <!-- Fonts -->
+    <!-- ===== FONTES DO GOOGLE ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Otimiza carregamento das fontes -->
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonte estilo pixel (título) -->
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+
+    <!-- Fonte principal -->
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Fonte alternativa -->
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ===== HEADER ===== -->
     <header>
+
+        <!-- Nome do site -->
         <h1>GameBite</h1>
 
+        <!-- MENU DE NAVEGAÇÃO -->
         <nav>
+
+            <!-- Link para início -->
             <a href="index.html">Início</a>
             <span>|</span>
 
+            <!-- Links internos (rolagem na página) -->
             <a href="#footerAbout">Sobre nós</a>
             <span>|</span>
 
@@ -35,67 +58,101 @@
             <a href="#footerIntegrantes">Integrantes</a>
             <span>|</span>
 
+            <!-- Link para jogos -->
             <a href="index.html">Jogos</a>
         </nav>
-        <div class="headerImage" role="img" aria-label="Imagem temática do site GameBite"></div>
+
+        <!-- Imagem decorativa do header -->
+        <div class="headerImage" 
+             role="img" 
+             aria-label="Imagem temática do site GameBite">
+        </div>
+
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
+
+    <!-- ===== SEÇÃO PRINCIPAL ===== -->
     <section class="menu">
 
-        <!-- SLIDER -->
+        <!-- ===== CARROSSEL ===== -->
         <div class="banner">
+
             <div class="slides">
-                <img src="assets/images/overcookedBanner.jpg" class="slide ativo" alt="Overcooked">
-                <img src="assets/images/minecraftBanner.jpg" class="slide" alt="Minecraft">
-                <img src="assets/images/stardewBanner.jpg" class="slide" alt="Stardew Valley">
+
+                <!-- Slide ativo (primeiro aparece) -->
+                <img src="assets/images/overcookedBanner.jpg" 
+                     class="slide ativo" 
+                     alt="Overcooked">
+
+                <!-- Outros slides -->
+                <img src="assets/images/minecraftBanner.jpg" 
+                     class="slide" 
+                     alt="Minecraft">
+
+                <img src="assets/images/stardewBanner.jpg" 
+                     class="slide" 
+                     alt="Stardew Valley">
             </div>
 
+            <!-- Botão anterior -->
             <button class="prev">&#10094;</button>
+
+            <!-- Botão próximo -->
             <button class="next">&#10095;</button>
         </div>
 
-        <!-- BUSCA -->
+
+        <!-- ===== BUSCA ===== -->
         <div class="busca">
-            <input type="text" id="searchInput" placeholder="Buscar Jogo...">
+            <input type="text" 
+                   id="searchInput" 
+                   placeholder="Buscar Jogo...">
         </div>
 
-        <!-- CARDS -->
+
+        <!-- ===== CARDS (JOGOS) ===== -->
         <div class="cards">
 
             <!-- Minecraft -->
             <a href="menuReceitas/minecraftMenu.html" class="card-link">
                 <div class="card">
+
                     <img src="assets/images/cardMine.jpg" alt="Minecraft">
 
                     <div class="card-content">
                         <h3>Minecraft</h3>
                         <p>Jogo de aventura</p>
                     </div>
+
                 </div>
             </a>
 
             <!-- Overcooked -->
             <a href="menuReceitas/overcookedMenu.html" class="card-link">
                 <div class="card">
+
                     <img src="assets/images/cardOvercooked.jpg" alt="Overcooked">
 
                     <div class="card-content">
                         <h3>OverCooked</h3>
                         <p>Jogo de aventura e cozinha</p>
                     </div>
+
                 </div>
             </a>
 
             <!-- Stardew Valley -->
             <a href="menuReceitas/stardewvalleyMenu.html" class="card-link">
                 <div class="card">
-                    <img src="menuReceitas/assets/Images/StardewValley/stardewvalleyIcon.jpg" alt="Stardew Valley">
+
+                    <img src="menuReceitas/assets/Images/StardewValley/stardewvalleyIcon.jpg" 
+                         alt="Stardew Valley">
 
                     <div class="card-content">
                         <h3>Stardew Valley</h3>
                         <p>Fazenda</p>
                     </div>
+
                 </div>
             </a>
 
@@ -103,40 +160,50 @@
 
     </section>
 
-        <section class="form-section">
-    <h2>Sugira um jogo ou receita 🎮🍔</h2>
 
-    <form id="formSugestao">
+    <!-- ===== FORMULÁRIO ===== -->
+    <section class="form-section">
 
-        <input type="text" id="nome" placeholder="Seu nome">
+        <h2>Sugira um jogo ou receita 🎮🍔</h2>
 
-        <input type="email" id="email" placeholder="Seu email">
+        <form id="formSugestao">
 
-        <input type="text" id="jogo" placeholder="Nome do jogo">
+            <!-- Campo nome -->
+            <input type="text" id="nome" placeholder="Seu nome">
 
-        <textarea id="mensagem" placeholder="Sugestão de receita ou ideia..."></textarea>
+            <!-- Campo email -->
+            <input type="email" id="email" placeholder="Seu email">
 
-        <button type="submit">Enviar Sugestão</button>
+            <!-- Campo jogo -->
+            <input type="text" id="jogo" placeholder="Nome do jogo">
 
-        <p id="msgErro"></p>
+            <!-- Campo mensagem -->
+            <textarea id="mensagem" placeholder="Sugestão de receita ou ideia..."></textarea>
 
-    </form>
-</section>
+            <!-- Botão -->
+            <button type="submit">Enviar Sugestão</button>
 
-    <!-- FOOTER -->
+            <!-- Mensagem de erro/sucesso -->
+            <p id="msgErro"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footerDoSite" id="footer">
 
+        <!-- Sobre -->
         <div class="about" id="footerAbout">
             <h3>Sobre Nós</h3>
             <p>
                 A GameBite é pra quem ama games e quer levar essa paixão pra cozinha.
-                Aqui você encontra receitas inspiradas nos seus jogos favoritos pra
-                finalmente provar aquelas comidas que sempre deram vontade.
-                Bora matar a nostalgia, testar coisas novas e transformar o mundo gamer
-                em algo real e delicioso!
+                Aqui você encontra receitas inspiradas nos seus jogos favoritos...
             </p>
         </div>
 
+        <!-- Turma -->
         <div class="turma" id="footerTurma">
             <h3>Nossa Turma</h3>
             <p>
@@ -146,6 +213,7 @@
             </p>
         </div>
 
+        <!-- Integrantes -->
         <div class="integrantes" id="footerIntegrantes">
             <h3>Desenvolvedores do Site</h3>
             <p>
@@ -157,6 +225,7 @@
 
     </footer>
 
+    <!-- Conecta o JavaScript -->
     <script src="script.js"></script>
 
 </body>

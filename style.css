@@ -1,22 +1,27 @@
+/* Aplica box-sizing para facilitar o controle de tamanho dos elementos */
 *{
     box-sizing: border-box;
 }
 
+/* Estilo geral da página */
 body {
-    background-color: rgb(0, 10, 32);
-    margin: 0;
+    background-color: rgb(0, 10, 32); /* Fundo azul escuro */
+    margin: 0; /* Remove margens padrão */
 }
 
+/* Acessibilidade: destaque ao navegar com teclado */
 a:focus-visible, .card:focus-visible {
     outline: 3px solid yellow;
     outline-offset: 3px;
 }
 
+/* Remove outline padrão ao focar com mouse */
 a:focus,
 .card:focus {
     outline: none;
 }
 
+/* Cabeçalho */
 header{
     width: 100%;
     text-align: center;
@@ -27,13 +32,15 @@ header{
     justify-content: center;
 }
 
+/* Título principal */
 header h1{
     font-family: "Sixtyfour", sans-serif;
     color: yellow;
-    font-size: clamp(40px,6vw,70px);
+    font-size: clamp(40px,6vw,70px); /* Responsivo */
     margin: clamp(10px, 2vw, 20px) 0 5px 0;
 }
 
+/* Imagem do header */
 .headerImage{
     width: 100%;
     height: clamp(150px,20vw,280px);
@@ -43,6 +50,7 @@ header h1{
     background-repeat: no-repeat;
 }
 
+/* Menu de navegação */
 nav{
     width: 100%;
     background: rgba(0, 10, 32, 0.9); 
@@ -54,6 +62,7 @@ nav{
     padding: 10px 0 20px 0;
 }
 
+/* Links do menu */
 nav a{
     font-family: "Pixelify Sans", sans-serif;
     text-decoration: none;
@@ -63,16 +72,19 @@ nav a{
     -webkit-text-stroke: 0.2px white;
 }
 
+/* Separadores do menu */
 nav span {
     color: yellow;
     -webkit-text-stroke: 0.2px white;
 }
 
+/* Efeito hover/focus nos links */
 nav a:hover,
 nav a:focus {
     color: white;
 }
 
+/* Banner (carrossel) */
 .banner {
     width: 90%;
     max-width: 800px;
@@ -84,20 +96,22 @@ nav a:focus {
     position: relative;
 }
 
+/* Slides do banner */
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0;
+    opacity: 0; /* Invisível por padrão */
     transition: opacity 1s;
 }
 
+/* Slide ativo */
 .slide.ativo {
     opacity: 1;
 }
 
-/* SETAS */
+/* BOTÕES (setas do carrossel) */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -112,21 +126,24 @@ nav a:focus {
     transition: opacity 0.3s, transform 0.2s;
 }
 
+/* Posicionamento das setas */
 .prev { left: 10px; }
 .next { right: 10px; }
 
+/* Efeito ao passar o mouse */
 .prev:hover, .next:hover {
     opacity: 1;
     transform: translateY(-50%) scale(1.2);
 }
 
-/* BUSCA */
+/* Campo de busca */
 .busca {
     display: flex;
     justify-content: center;
     margin: 40px 0;
 }
 
+/* Input da busca */
 .busca input {
     width: clamp(200px, 40%, 400px);
     padding: 12px 20px;
@@ -139,10 +156,12 @@ nav a:focus {
     border: 2px solid yellow;
 }
 
+/* Placeholder */
 .busca input::placeholder {
     color: #ccc;
 }
 
+/* Grid de cards */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -152,6 +171,7 @@ nav a:focus {
     margin: 40px auto;
 }
 
+/* Card individual */
 .card {
     background-color: #020f2a;
     border-radius: 15px;
@@ -166,6 +186,7 @@ nav a:focus {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Imagem do card */
 .card img {
     width: 100%;
     height: 160px; 
@@ -174,12 +195,14 @@ nav a:focus {
     margin-bottom: 15px;
 }
 
+/* Efeito ao passar mouse */
 .card:hover,
 .card:focus {
     transform: scale(1.05);
     box-shadow: 0 15px 30px yellow;
 }
 
+/* Conteúdo interno do card */
 .card-content {
     display: flex;
     flex-direction: column;
@@ -188,6 +211,7 @@ nav a:focus {
     width: 100%;
 }
 
+/* Título do card */
 .card-content h3 {
     color: white;
     font-family: "Pixelify Sans", sans-serif;
@@ -197,6 +221,7 @@ nav a:focus {
     margin-bottom: 10px;
 }
 
+/* Texto do card */
 .card-content p {
     color: white; 
     font-family: "Jersey 10", sans-serif;
@@ -205,21 +230,25 @@ nav a:focus {
     text-align: center; 
 }
 
+/* Link que envolve o card */
 .card-link {
     text-decoration: none;
     color: inherit;
 }
 
+/* Seção do formulário */
 .form-section {
     margin-top: 60px;
     text-align: center;
 }
 
+/* Título do formulário */
 .form-section h2 {
     color: white;
     margin-bottom: 20px;
 }
 
+/* Formulário */
 #formSugestao {
     max-width: 400px;
     margin: auto;
@@ -228,6 +257,7 @@ nav a:focus {
     gap: 10px;
 }
 
+/* Inputs e textarea */
 #formSugestao input,
 #formSugestao textarea {
     padding: 10px;
@@ -237,11 +267,13 @@ nav a:focus {
     color: white;
 }
 
+/* Ajuste do textarea */
 #formSugestao textarea {
     resize: none;
     height: 100px;
 }
 
+/* Botão */
 #formSugestao button {
     padding: 10px;
     border-radius: 10px;
@@ -251,12 +283,13 @@ nav a:focus {
     font-weight: bold;
 }
 
+/* Mensagem de erro */
 #msgErro {
     color: red;
     font-size: 14px;
 }
 
-/* FOOTER */
+/* Rodapé */
 .footerDoSite {
     display: flex;
     justify-content: space-between;
@@ -267,6 +300,7 @@ nav a:focus {
     margin-top: 120px;
 }
 
+/* Colunas do footer */
 .footerDoSite .about,
 .footerDoSite .turma,
 .footerDoSite .integrantes {
@@ -274,6 +308,7 @@ nav a:focus {
     min-width: 250px;
 }
 
+/* Títulos do footer */
 .about h3,
 .turma h3,
 .integrantes h3{
@@ -283,6 +318,7 @@ nav a:focus {
     -webkit-text-stroke: 0.1px white;
 }
 
+/* Textos do footer */
 .about p,
 .turma p,
 .integrantes p{
@@ -291,6 +327,7 @@ nav a:focus {
     color: white;
 }
 
+/* Ajustes específicos */
 .about p{
     text-align: justify;
 }
@@ -300,15 +337,18 @@ nav a:focus {
     text-align: center;
 }
 
+/* Rolagem suave */
 html {
     scroll-behavior: smooth;
 }
 
+/* Animação de destaque */
 .highlight h3,
 .highlight p {
     animation: piscarTexto 1s ease-in-out ;
 }
 
+/* Keyframes da animação */
 @keyframes piscarTexto {
 
     0% {
