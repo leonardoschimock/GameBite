@@ -227,7 +227,7 @@ nav a:focus {
     font-family: "Jersey 10", sans-serif;
     font-size: clamp(18px,1.5vw,18px);
     font-weight: 300;
-    text-align: center; 
+    text-align: justify; 
 }
 
 /* Link que envolve o card */
@@ -238,33 +238,42 @@ nav a:focus {
 
 /* Seção do formulário */
 .form-section {
-    margin-top: 60px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 80px auto 60px auto; /* espaço entre cards e footer */
     text-align: center;
+    padding: 30px 20px;
+    background-color: #020f2a;
+    border: 2px solid yellow;
+    border-radius: 15px;
 }
 
 /* Título do formulário */
 .form-section h2 {
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-family: "Pixelify Sans", sans-serif;
 }
 
 /* Formulário */
 #formSugestao {
-    max-width: 400px;
+    width: 100%;
+    max-width: 500px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 /* Inputs e textarea */
 #formSugestao input,
 #formSugestao textarea {
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
     border: 2px solid yellow;
     background-color: #001a3d;
     color: white;
+    font-size: 16px;
 }
 
 /* Ajuste do textarea */
@@ -275,12 +284,17 @@ nav a:focus {
 
 /* Botão */
 #formSugestao button {
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
     border: none;
     background-color: yellow;
     cursor: pointer;
     font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#formSugestao button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px yellow;
 }
 
 /* Mensagem de erro */
@@ -297,7 +311,7 @@ nav a:focus {
     flex-wrap: wrap;
     background-color: rgb(0, 6, 20);
     padding: 40px 5%;
-    margin-top: 120px;
+    margin-top: 60px;
 }
 
 /* Colunas do footer */
