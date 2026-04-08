@@ -25,52 +25,50 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // troca automática
+    // 🔥 troca automática (5 segundos)
     setInterval(() => {
         indice = (indice + 1) % slides.length;
         mostrarSlide(indice);
-    }, 5000);
+    }, 5000); // ← aqui controla o tempo
 
-    // mostra o primeiro slide
     mostrarSlide(indice);
 
 
     // ===== BUSCA =====
     const campoBusca = document.getElementById("searchInput");
-const container = document.querySelector(".cards");
+    const container = document.querySelector(".cards");
 
-if (campoBusca) {
-    campoBusca.addEventListener("input", () => {
+    if (campoBusca) {
+        campoBusca.addEventListener("input", () => {
 
-        const filtro = campoBusca.value.toLowerCase();
-        const cards = Array.from(container.querySelectorAll(".card-link"));
+            const filtro = campoBusca.value.toLowerCase();
+            const cards = Array.from(container.querySelectorAll(".card-link"));
 
-        cards.forEach(card => {
-            const texto = card.textContent.toLowerCase();
+            cards.forEach(card => {
+                const texto = card.textContent.toLowerCase();
 
-            if (texto.includes(filtro)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
+                if (texto.includes(filtro)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            ordenarCards();
         });
-
-        // reordena após filtrar
-        ordenarCards();
-    });
-}
+    }
 
     function ordenarCards() {
-    const container = document.querySelector(".cards");
-    const cards = Array.from(container.querySelectorAll(".card-link"));
+        const container = document.querySelector(".cards");
+        const cards = Array.from(container.querySelectorAll(".card-link"));
 
-    cards.sort((a, b) => {
-        const nomeA = a.textContent.trim().toLowerCase();
-        const nomeB = b.textContent.trim().toLowerCase();
-        return nomeA.localeCompare(nomeB);
-    });
+        cards.sort((a, b) => {
+            const nomeA = a.textContent.trim().toLowerCase();
+            const nomeB = b.textContent.trim().toLowerCase();
+            return nomeA.localeCompare(nomeB);
+        });
 
-    cards.forEach(card => container.appendChild(card));
+        cards.forEach(card => container.appendChild(card));
     }
 
 });
