@@ -4,177 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Menu Principal</title>
-
     <link rel="stylesheet" href="style.css">
-    <!-- Conecta o CSS -->
-
-    <!-- ===== FONTES DO GOOGLE ===== -->
+    <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- Otimiza carregamento das fontes -->
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Fonte estilo pixel (título) -->
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
-
-    <!-- Fonte principal -->
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-
-    <!-- Fonte alternativa -->
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- HEADER -->
     <header>
         <h1>GameBite</h1>
-
-        <nav>
-
+        <nav aria-label="Menu principal">
             <a href="index.html">Início</a>
             <span>|</span>
-
             <a href="#footerAbout">Sobre nós</a>
             <span>|</span>
-
             <a href="#footerTurma">Turma</a>
             <span>|</span>
-
             <a href="#footerIntegrantes">Integrantes</a>
             <span>|</span>
-
             <a href="index.html">Jogos</a>
         </nav>
-
-        <div class="headerImage" 
-            role="img" 
-            aria-label="Imagem temática do site GameBite">
-        </div>
-
+        <div class="headerImage" role="img" aria-label="Imagem temática do site GameBite"></div>
     </header>
 
-
-    <section class="menu">
-        <div class="banner">
-            <div class="slides">
-
-                <!-- Slide ativo (primeiro aparece) -->
-                <img src="assets/images/overcookedBanner.jpg" 
-                    class="slide ativo" 
-                    alt="Overcooked">
-
-                <!-- Outros slides -->
-                <img src="assets/images/minecraftBanner.jpg" 
-                    class="slide" 
-                    alt="Minecraft">
-
-                <img src="assets/images/stardewBanner.jpg" 
-                    class="slide" 
-                    alt="Stardew Valley">
-            </div>
-
-            <!-- Botão anterior -->
-            <button class="prev">&#10094;</button>
-
-            <!-- Botão próximo -->
-            <button class="next">&#10095;</button>
-        </div>
-
-
-        <!-- ===== BUSCA ===== -->
-        <div class="busca">
-            <input type="text" 
-                id="searchInput" 
-                placeholder="Buscar Jogo...">
-        </div>
-
-
-        <!-- ===== CARDS (JOGOS) ===== -->
-        <div class="cards">
-
-            <a href="menuReceitas/minecraftMenu.html" class="card-link">
-                <div class="card">
-
-                    <img src="assets/images/cardMine.jpg" alt="Minecraft">
-
-                    <div class="card-content">
-                        <h3>Minecraft</h3>
-                        <p>
-                            Jogo de sandbox criativo onde jogadores exploram mundos infinitos, constroem estruturas, 
-                            sobrevivem a perigos e liberam imaginação em aventuras únicas.
-                        </p>
-                    </div>
-
-                </div>
-            </a>
-
-            <a href="menuReceitas/overcookedMenu.html" class="card-link">
-                <div class="card">
-
-                    <img src="assets/images/cardOvercooked.jpg" alt="Overcooked">
-
-                    <div class="card-content">
-                        <h3>OverCooked</h3>
-                        <p>
-                            Jogo cooperativo caótico de culinária onde equipes preparam pratos rapidamente, 
-                            coordenando tarefas sob pressão crescente em cozinhas malucas e desafiadoras.
-                        </p>
-                    </div>
-
-                </div>
-            </a>
-
-            <a href="menuReceitas/stardewvalleyMenu.html" class="card-link">
-                <div class="card">
-
-                    <img src="menuReceitas/assets/Images/StardewValley/stardewvalleyIcon.jpg" 
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- MENU / HERO -->
+        <section class="menu">
+            <!-- CARROSSEL -->
+            <div class="banner">
+                <div class="slides">
+                    <img src="assets/images/overcookedBanner.jpg" 
+                        class="slide ativo" 
+                        alt="Overcooked">
+                    <img src="assets/images/minecraftBanner.jpg" 
+                        class="slide" 
+                        alt="Minecraft">
+                    <img src="assets/images/stardewBanner.jpg" 
+                        class="slide" 
                         alt="Stardew Valley">
-
-                    <div class="card-content">
-                        <h3>Stardew Valley</h3>
-                        <p>
-                            Simulador relaxante de fazenda onde jogador cultiva plantações, cria animais, faz amizades, 
-                            explora cavernas e desenvolve vida tranquila no campo.
-                        </p>
-                    </div>
-
                 </div>
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ===== FORMULÁRIO ===== -->
-    <section class="form-section">
-
-        <h2>Sugira um jogo ou receita</h2>
-
-        <form id="formSugestao">
-
-            <input type="text" id="nome" placeholder="Seu nome">
-
-            <input type="email" id="email" placeholder="Seu email">
-
-            <input type="text" id="jogo" placeholder="Nome do jogo">
-
-            <textarea id="mensagem" placeholder="Sugestão de receita ou ideia..."></textarea>
-
-            <button type="submit">Enviar Sugestão</button>
-
-            <p id="msgErro"></p>
-
-        </form>
-
-    </section>
-
-
-    <!-- ===== FOOTER ===== -->
+                <button class="prev" aria-label="Slide anterior">&#10094;</button>
+                <button class="next" aria-label="Próximo slide">&#10095;</button>
+            </div>
+            <!-- BUSCA -->
+            <section class="busca" aria-label="Busca de jogos">
+                <input type="text" 
+                    id="searchInput" 
+                    placeholder="Buscar Jogo..." 
+                    aria-label="Buscar jogo">
+            </section>
+            <!-- CARDS -->
+            <section class="cards" aria-label="Lista de jogos">
+                <a href="menuReceitas/minecraftMenu.html" class="card-link">
+                    <article class="card">
+                        <img src="assets/images/cardMine.jpg" alt="Minecraft">
+                        <div class="card-content">
+                            <h3>Minecraft</h3>
+                            <p>
+                                Jogo de sandbox criativo onde jogadores exploram mundos infinitos, constroem estruturas, 
+                                sobrevivem a perigos e liberam imaginação em aventuras únicas.
+                            </p>
+                        </div>
+                    </article>
+                </a>
+                <a href="menuReceitas/overcookedMenu.html" class="card-link">
+                    <article class="card">
+                        <img src="assets/images/cardOvercooked.jpg" alt="Overcooked">
+                        <div class="card-content">
+                            <h3>OverCooked</h3>
+                            <p>
+                                Jogo cooperativo caótico de culinária onde equipes preparam pratos rapidamente, 
+                                coordenando tarefas sob pressão crescente em cozinhas malucas e desafiadoras.
+                            </p>
+                        </div>
+                    </article>
+                </a>
+                <a href="menuReceitas/stardewvalleyMenu.html" class="card-link">
+                    <article class="card">
+                        <img src="menuReceitas/assets/Images/StardewValley/stardewvalleyIcon.jpg" 
+                            alt="Stardew Valley">
+                        <div class="card-content">
+                            <h3>Stardew Valley</h3>
+                            <p>
+                                Simulador relaxante de fazenda onde jogador cultiva plantações, cria animais, faz amizades, 
+                                explora cavernas e desenvolve vida tranquila no campo.
+                            </p>
+                        </div>
+                    </article>
+                </a>
+            </section>
+        </section>
+        <!-- FORMULÁRIO -->
+        <section class="form-section" aria-labelledby="titulo-form">
+            <h2 id="titulo-form">Sugira um jogo ou receita</h2>
+            <form id="formSugestao">
+                <input type="text" id="nome" placeholder="Seu nome" aria-label="Seu nome">
+                <input type="email" id="email" placeholder="Seu email" aria-label="Seu email">
+                <input type="text" id="jogo" placeholder="Nome do jogo" aria-label="Nome do jogo">
+                <textarea id="mensagem" placeholder="Sugestão de receita ou ideia..." aria-label="Mensagem"></textarea>
+                <button type="submit">Enviar Sugestão</button>
+                <p id="msgErro"></p>
+            </form>
+        </section>
+    </main>
+    <!-- FOOTER -->
     <footer class="footerDoSite" id="footer">
-
-        <div class="about" id="footerAbout">
+        <section class="about" id="footerAbout">
             <h3>Sobre Nós</h3>
             <p>
                 A GameBite é pra quem ama games e quer levar essa paixão pra cozinha.
@@ -183,30 +124,24 @@
                 Bora matar a nostalgia, testar coisas novas e transformar o mundo gamer
                 em algo real e delicioso!            
             </p>
-        </div>
-
-        <div class="turma" id="footerTurma">
+        </section>
+        <section class="turma" id="footerTurma">
             <h3>Nossa Turma</h3>
             <p>
                 Centro Universitário Cesumar <br><br>
                 Engenharia de Software <br><br>
                 ESOFT B Noturno
             </p>
-        </div>
-
-        <div class="integrantes" id="footerIntegrantes">
+        </section>
+        <section class="integrantes" id="footerIntegrantes">
             <h3>Desenvolvedores do Site</h3>
             <p>
                 Jean Carlos Siqueira dos Santos <br><br>
                 Leonardo Schimock Silveira <br><br>
                 Thiago de Barros Inácio
             </p>
-        </div>
-
+        </section>
     </footer>
-
-    <!-- Conecta o JavaScript -->
     <script src="script.js"></script>
-
 </body>
 </html>
