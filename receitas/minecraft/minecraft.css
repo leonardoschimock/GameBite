@@ -282,34 +282,6 @@ html {
 
 /* RESPONSIVIDADE */
 
-/* Tablets */
-@media (max-width: 1024px) {
-    .receitas {
-        grid-template-columns: 1fr; /* vira 1 coluna */
-    }
-
-    #inGame img {
-        width: 100%;
-        height: auto;
-    }
-
-    .card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .card img {
-        width: 150px;
-        height: 150px;
-    }
-
-    nav a {
-        padding: 0 40px;
-        font-size: 18px;
-    }
-}
-
 @media (max-width: 600px) {
 
     /* GRID vira 1 coluna real */
@@ -346,9 +318,10 @@ html {
 
     /* IMAGENS AJUSTADAS */
     .card img {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
     }
 
     #inGame img {
