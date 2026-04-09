@@ -10,13 +10,6 @@ header h1 {
     font-size: 50px;
 }
 
-<<<<<<< HEAD
-header {
-    height: 400px;
-    background-image: url(/receitas/assets/Images/Page/headerImage.png);
-    background-size: cover;
-    background-position: center;
-=======
 header{
     width: 100%;
     text-align: center;
@@ -27,7 +20,6 @@ header h1{
     color: yellow;
     font-size: clamp(40px,6vw,70px);
     margin: clamp(10px, 2vw, 20px) 0 5px 0;
->>>>>>> dca69db5588ea3df63203e8d91c21ed20a6af674
 }
 
 nav{
