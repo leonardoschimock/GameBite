@@ -121,10 +121,8 @@ body {
 }
 
 #inGame img {
-    height: 300px;
-    width: 700px;
-    border-radius: 5px;
-    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
 }
 
 .logo {
@@ -328,6 +326,14 @@ html {
         max-width: 100%;
         padding: 20px;
         margin: 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: rgba(0, 20, 60, 0.6);
+        backdrop-filter: blur(6px);
+    }
+
+    .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 20px rgba(53, 228, 0, 0.5);
     }
 
     /* REMOVE espaço estranho lateral */
