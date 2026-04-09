@@ -86,6 +86,7 @@ nav a:focus {
 }
 
 .card {
+    background: #051330;
     display: flex;
     align-items: center;
     gap: clamp(10px,2vw,20px);
