@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<!-- Define que o documento é HTML5 -->
-
 <html lang="pt-br">
-<!-- Define o idioma como português do Brasil -->
 
 <head>
     <meta charset="UTF-8">
-    <!-- Permite acentuação (UTF-8) -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsividade (adapta para celular) -->
 
     <title>Menu Principal</title>
-    <!-- Título da aba do navegador -->
 
     <link rel="stylesheet" href="style.css">
     <!-- Conecta o CSS -->
@@ -34,21 +27,14 @@
 </head>
 
 <body>
-
-    <!-- ===== HEADER ===== -->
     <header>
-
-        <!-- Nome do site -->
         <h1>GameBite</h1>
 
-        <!-- MENU DE NAVEGAÇÃO -->
         <nav>
 
-            <!-- Link para início -->
             <a href="index.html">Início</a>
             <span>|</span>
 
-            <!-- Links internos (rolagem na página) -->
             <a href="#footerAbout">Sobre nós</a>
             <span>|</span>
 
@@ -58,11 +44,9 @@
             <a href="#footerIntegrantes">Integrantes</a>
             <span>|</span>
 
-            <!-- Link para jogos -->
             <a href="index.html">Jogos</a>
         </nav>
 
-        <!-- Imagem decorativa do header -->
         <div class="headerImage" 
             role="img" 
             aria-label="Imagem temática do site GameBite">
@@ -71,12 +55,8 @@
     </header>
 
 
-    <!-- ===== SEÇÃO PRINCIPAL ===== -->
     <section class="menu">
-
-        <!-- ===== CARROSSEL ===== -->
         <div class="banner">
-
             <div class="slides">
 
                 <!-- Slide ativo (primeiro aparece) -->
@@ -113,7 +93,6 @@
         <!-- ===== CARDS (JOGOS) ===== -->
         <div class="cards">
 
-            <!-- Minecraft -->
             <a href="menuReceitas/minecraftMenu.html" class="card-link">
                 <div class="card">
 
@@ -130,7 +109,6 @@
                 </div>
             </a>
 
-            <!-- Overcooked -->
             <a href="menuReceitas/overcookedMenu.html" class="card-link">
                 <div class="card">
 
@@ -147,7 +125,6 @@
                 </div>
             </a>
 
-            <!-- Stardew Valley -->
             <a href="menuReceitas/stardewvalleyMenu.html" class="card-link">
                 <div class="card">
 
@@ -177,22 +154,16 @@
 
         <form id="formSugestao">
 
-            <!-- Campo nome -->
             <input type="text" id="nome" placeholder="Seu nome">
 
-            <!-- Campo email -->
             <input type="email" id="email" placeholder="Seu email">
 
-            <!-- Campo jogo -->
             <input type="text" id="jogo" placeholder="Nome do jogo">
 
-            <!-- Campo mensagem -->
             <textarea id="mensagem" placeholder="Sugestão de receita ou ideia..."></textarea>
 
-            <!-- Botão -->
             <button type="submit">Enviar Sugestão</button>
 
-            <!-- Mensagem de erro/sucesso -->
             <p id="msgErro"></p>
 
         </form>
@@ -203,7 +174,6 @@
     <!-- ===== FOOTER ===== -->
     <footer class="footerDoSite" id="footer">
 
-        <!-- Sobre -->
         <div class="about" id="footerAbout">
             <h3>Sobre Nós</h3>
             <p>
@@ -215,7 +185,6 @@
             </p>
         </div>
 
-        <!-- Turma -->
         <div class="turma" id="footerTurma">
             <h3>Nossa Turma</h3>
             <p>
@@ -225,7 +194,6 @@
             </p>
         </div>
 
-        <!-- Integrantes -->
         <div class="integrantes" id="footerIntegrantes">
             <h3>Desenvolvedores do Site</h3>
             <p>
