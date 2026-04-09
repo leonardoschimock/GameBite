@@ -140,25 +140,6 @@ body {
     background-color: rgb(0, 10, 32);
 }
 
-/**************************************************************************************************/
-
-.card #Minecraft{
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    border: 9px solid rgb(48, 128, 29);
-    border-radius: 15px;
-    padding: 50px;
-    position: relative;
-    margin: 10px;
-}
-
-#Minecraft img {
-    height: 200px;
-    width: 200px;
-    border-radius: 5px;
-    overflow: hidden;
-}
 
 /**************************************************************************************************/
 
