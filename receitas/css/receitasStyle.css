@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 header h1 {
     font-family: "Sixtyfour", sans-serif;
     font-style: normal;
@@ -6,11 +10,24 @@ header h1 {
     font-size: 50px;
 }
 
+<<<<<<< HEAD
 header {
     height: 400px;
     background-image: url(/receitas/assets/Images/Page/headerImage.png);
     background-size: cover;
     background-position: center;
+=======
+header{
+    width: 100%;
+    text-align: center;
+}
+
+header h1{
+    font-family: "Sixtyfour", sans-serif;
+    color: yellow;
+    font-size: clamp(40px,6vw,70px);
+    margin: clamp(10px, 2vw, 20px) 0 5px 0;
+>>>>>>> dca69db5588ea3df63203e8d91c21ed20a6af674
 }
 
 nav{
@@ -19,15 +36,17 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    flex-wrap: wrap;
+    gap: clamp(10px,2vw,25px);
+    padding: 10px 0 20px 0;
 }
 
 nav a{
-    font-family: "Pixelify sans", sans-serif;
+    font-family: "Pixelify Sans", sans-serif;
     text-decoration: none;
     color: yellow;
-    font-size: 20px;
-    padding: 0 100px;
+    font-size: clamp(14px,2vw,22px);
+    padding: 0 10px;
     -webkit-text-stroke: 0.2px white;
 }
 
@@ -36,8 +55,18 @@ nav span {
     -webkit-text-stroke: 0.2px white;
 }
 
-nav a:hover{
+nav a:hover,
+nav a:focus {
     color: white;
+}
+
+.headerImage{
+    width: 100%;
+    height: clamp(150px,20vw,280px);
+    background-image: url(../assets/Images/Page/headerImage.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 body {
@@ -50,14 +79,15 @@ body {
 .receitas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1600px;
-    margin: auto;
-    perspective: 1000px;
+    gap: clamp(20px,4vw,40px);
+    width: 90%;
+    max-width: 1100px;
+    margin: clamp(20px, 4vw, 40px) auto;
 }
 
+
 #infoPreparo li {
-    line-height: px;
+    line-height: 28px;
 }
 
 #Receita,
@@ -73,20 +103,20 @@ body {
 
 .card {
     display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    border: 9px solid rgb(53, 228, 0);
+    align-items: center;
+    gap: clamp(10px,2vw,20px);
+    border: 5px solid rgb(7, 182, 7);
     border-radius: 15px;
-    padding: 50px;
+    padding: clamp(10px,2vw,20px);
     position: relative;
-    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
-    height: 200px;
-    width: 200px;
+    width: clamp(90px,12vw,150px);
+    height: clamp(90px,12vw,150px);
     border-radius: 5px;
-    overflow: hidden;
+    object-fit: cover;
 }
 
 .receitas {
@@ -99,24 +129,23 @@ body {
 }
 
 #inGame img {
-    height: 300px;
-    width: 700px;
-    border-radius: 5px;
-    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
 }
 
 .logo {
     position: absolute;
-    top: -30px;
-    right: -30px;
-    padding: 8px 12px;
-    border-radius: 20px;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
 }
 
 .logo img {
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
+    width: clamp(35px,5vw,50px);
+    height: clamp(35px,5vw,50px);
+    border-radius: 50%;
+    border: 2px solid rgb(7, 182, 7);
+    background-color: rgb(0, 10, 32);
 }
 
 /**************************************************************************************************/
@@ -257,4 +286,130 @@ html {
         -webkit-text-stroke: 0.1px white;
         text-shadow: none;
     }
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .receitas {
+        grid-template-columns: 1fr; /* vira 1 coluna */
+    }
+
+    #inGame img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    nav a {
+        padding: 0 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* GRID vira 1 coluna real */
+    .receitas {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+        margin-top: 60px;
+    }
+
+    /* CARDS ocupam toda largura */
+    .card {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin: 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: rgba(0, 20, 60, 0.6);
+        backdrop-filter: blur(6px);
+    }
+
+    .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 20px rgba(53, 228, 0, 0.5);
+    }
+
+    /* REMOVE espaço estranho lateral */
+    #Receita,
+    #Preparo,
+    #inGame {
+        grid-column: span 1;
+        width: 100%;
+    }
+
+    /* IMAGENS AJUSTADAS */
+    .card img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    #inGame img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* TEXTO CENTRAL COMO NO PRINT */
+    .info {
+        text-align: center;
+    }
+
+    .info h2 {
+        text-align: center;
+    }
+
+    .info ul,
+    .info ol {
+        text-align: left; /* mantém leitura boa */
+    }
+
+    /* LOGO (bolinha verde) */
+    .logo {
+        top: -10px;
+        right: -10px;
+    }
+
+    .logo img {
+    width: 50px;
+    height: 50px;
+    }
+
+    /* NAV mais organizada */
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 5px 10px;
+    }
+
+    /* HEADER menor */
+    header {
+        height: 220px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
