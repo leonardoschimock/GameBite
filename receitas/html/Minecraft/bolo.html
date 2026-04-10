@@ -2,11 +2,11 @@
 <html lang="pt-br">
 
 <head>
-    <title>Sushi</title>
+    <title>Bolo</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/receitasStyle.css">
-    <script src="./JavaScript/receitasScript.js" defer></script>
+    <link rel="stylesheet" href="../../css/receitasStyle.css">
+    <script src="../../JavaScript/receitasScript.js" defer></script>
 
     <!-- FONTES -->
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
@@ -17,9 +17,8 @@
 
 <header>
     <h1>GameBite</h1>
-
-    <nav>
-        <a href="../index.html">Início</a>
+    <nav aria-label="Menu principal">
+        <a href="../../../index.html">Início</a>
         <span>|</span>
         <a href="#footerAbout">Sobre nós</a>
         <span>|</span>
@@ -27,10 +26,9 @@
         <span>|</span>
         <a href="#footerIntegrantes">Integrantes</a>
         <span>|</span>
-        <a href="../index.html">Jogos</a>
+        <a href="../../../index.html">Jogos</a>
     </nav>
-
-    <div class="headerImage"></div>
+    <div class="headerImage" role="img" aria-label="Imagem temática do site GameBite"></div>
 </header>
 
 <main>
@@ -39,25 +37,24 @@
         <!-- CARD PRINCIPAL -->
         <article class="card">
             <div class="logo">
-                <img src="../menuReceitas/assets/Images/OverCooked/overcookedIcon.jpg" alt="Logo do jogo">
+                <img src="../../assets/Images/Minecraft/minecraftLogo.jpg" alt="Logo do jogo">
             </div>
 
-            <img src="../menuReceitas/assets/Images/OverCooked/iconSushi.jpg" alt="Imagem do Sushi">
+            <img src="../../../menuReceitas/assets/Images/Minecraft/boloIcon.jpg" alt="Imagem do Bolo">
 
             <div class="info">
-                <h2>Sushi</h2>
+                <h2>Bolo</h2>
 
                 <p class="subtitulo">INGREDIENTES</p>
 
                 <ul class="lista">
-                    <li>Arroz - 2 xícaras</li>
-                    <li>Vinagre de arroz - 2 colheres (sopa)</li>
-                    <li>Açúcar - 1 colher (sopa)</li>
-                    <li>Sal - 1 colher (chá)</li>
-                    <li>Alga nori - 2 folhas</li>
-                    <li>Peixe (Salmão ou atum) - 2 folhas</li>
-                    <li>Pepino - 1 unidade</li>
-                    <li>Wasabi - a gosto</li>
+                    <li>Farinha – 3 xícaras</li>
+                    <li>Açúcar – 2 xícaras</li>
+                    <li>Leite – 1 xícara</li>
+                    <li>Ovos – 3 unidades</li>
+                    <li>Manteiga – 2 colheres (sopa)</li>
+                    <li>Fermento – 1 colher (sopa)</li>
+                    <li>Baunilha – 1 colher (chá)</li>
                 </ul>
             </div>
         </article>
@@ -68,45 +65,51 @@
                 <h2>Modo de preparo</h2>
 
                 <ol class="lista">
-                    <li> Cozinhar o arroz até ficar macio</li>
-                    <li> Misturar vinagre, açúcar e sal no arroz ainda quente</li>
-                    <li> Cortar o peixe em tiras finas</li>
-                    <li> Cortar o pepino em tiras</li>
-                    <li> Colocar a alga sobre uma superfície plana</li>
-                    <li> Espalhar o arroz sobre a alga</li>
-                    <li> Adicionar peixe e pepino no centro</li>
-                    <li> Enrolar firmemente formando o sushi</li>
-                    <li> Cortar em pedaços iguais</li>
-                    <li> Servir com wasabi</li>
+                    <li> Misturar os ovos, o açúcar e a manteiga</li>
+                    <li> Adicionar o leite e a baunilha</li>
+                    <li> Misturar até formar uma massa homogênea</li>
+                    <li> Adicionar o fermento e mexer levemente</li>
+                    <li> Despejar a massa em uma forma</li>
+                    <li> Assar em forno a 180°C por 30-40 minutos</li>
+                    <li> Retirar do forno e deixar esfriar</li>
+                    <li> Desenformar com cuidado</li>
+                    <li> Servir em fatias</li>
                 </ol>
             </div>
         </article>
 
         <!-- RECEITA NO JOGO -->
         <article class="card" id="inGame">
-            <img src="./assets/Images/Overcooked/sushiCraft.jpg" alt="Sushi do Overcooked">
+            <img src="../../assets/Images/Minecraft/boloCraft.jpg" alt="Cookie no Minecraft">
 
             <div class="info">
                 <h2>Receita no jogo</h2>
 
                 <div class="bloco">
-                    <h3>Arroz 2x</h3>
+                    <h3>Trigo x3</h3>
                     <p>
-                        Cozido em panela com água até ficar pronto para uso.
+                        Obtido ao colher plantações cultivadas a partir de sementes.
                     </p>
                 </div>
 
                 <div class="bloco">
-                    <h3>Peixe 1x</h3>
+                    <h3>Leite x3</h3>
                     <p>
-                        Cortado na tábua antes de montar o prato.
+                        Coletado utilizando um balde em vacas.
                     </p>
                 </div>
 
                 <div class="bloco">
-                    <h3>Alga 1x</h3>
+                    <h3>Açúcar x2</h3>
                     <p>
-                        Usada como base para enrolar o sushi.
+                        Produzido a partir da cana-de-açúcar.
+                    </p>
+                </div>
+
+                <div class="bloco">
+                    <h3>Ovo x1</h3>
+                    <p>
+                        Obtido de galinhas.
                     </p>
                 </div>
             </div>
