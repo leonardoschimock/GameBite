@@ -49,12 +49,14 @@ nav a{
     text-decoration: none;
     color: yellow;
     font-size: clamp(14px,2vw,22px);
+    padding: 0 10px;
     -webkit-text-stroke: 0.1px white;
 
 }
 
 nav span {
     color: yellow;
+    -webkit-text-stroke: 0.2px white;
 }
 
 nav a:hover,
@@ -98,6 +100,7 @@ nav a:focus {
     width: clamp(120px, 20vw, 200px);
     height: auto;
     object-fit: contain;
+    border-radius: 15px;
 }
 
 /* LOGO */
@@ -239,14 +242,14 @@ nav a:focus {
 
 }
 
-/* 📱 TABLET */
+/* TABLET */
 @media (max-width: 900px) {
     .receitas {
         grid-template-columns: 1fr;
     }
 }
 
-/* 📱 CELULAR */
+/* CELULAR */
 @media (max-width: 600px) {
     .card {
         flex-direction: column;
@@ -265,4 +268,8 @@ nav a:focus {
     nav span {
         display: none;
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
